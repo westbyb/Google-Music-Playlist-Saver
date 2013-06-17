@@ -7,7 +7,10 @@ pw = getpass.getpass("What's the password: ")
 logged_in = api.login(username,pw)
 
 playlists = api.get_all_playlist_ids()
-print playlists
+stuff = playlists.get('user')
+for x,y in stuff:
+	print x
+	print y
 
 snag = raw_input("Enter the playlist id that you would like to get: ")
 
